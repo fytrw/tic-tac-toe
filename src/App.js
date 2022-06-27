@@ -24,14 +24,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* <React.StrictMode> */}
+      <React.StrictMode>
       <Routes>
         <Route path="/" element={<Menu  playerMark={playerMark} setPlayerMark={setPlayerMark} setGameType={setGameType}/>}/>
         <Route path="/game" element={<Game playerMark={playerMark} setPlayerMark={setPlayerMark} setModalActive={setGameModalActive} results={results} setResults={setResults} gameActive={gameActive} setGameActive={setGameActive} gameState={gameState} setGameState={setGameState} playerTurn={playerTurn} setPlayerTurn={setPlayerTurn} setRestartModal={setRestartModal} gameType={gameType}/>}/>
       </Routes>
       {gameModalActive[0] ? <GameEndModal playerMark={playerMark} reset={reset} setModalActive={setGameModalActive} setPlayerMark={setPlayerMark} setResults={setResults} gameModalActive={gameModalActive} gameType={gameType}/> : null}
       {restartModal ? <RestartModal setRestartModal={setRestartModal} reset={reset} setResults={setResults}/> : null}
-      {/* </React.StrictMode> */}
+      </React.StrictMode>
     </div>
   );
 }
